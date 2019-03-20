@@ -1,0 +1,25 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: skyblue;
+}
+
+
+/* .div2 {
+    transform: translate(100px, 100px)
+} */
+
+
+/* .div2 {
+    transform: rotate(180deg);
+} */
+
+
+/* .div2 {
+    transform: scale(1, 2);
+} */
+
+
+/* .div2 {
+    transform: skew(20deg, 20deg);
+} */
