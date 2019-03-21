@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div onmouseout="onOut(this)" onmouseover="onOver(this)"></div>
+    <script>
+        function onOver(ooj) {
+            ooj.innerHTML = "你好";
+        }
+
+        function onOut(ooj) {
+            ooj.innerHTML = "我走了";
+        }
+    </script>
+
+    <form action="">
+        <!-- <input type="text" onchange="changeDemo(this)"> -->
+        <input type="text" onchange="alert('nihao')">
+    </form>
+    <!-- <script>
+        function changeDemo(bg) {
+            alert("内容改变了");
+        }
+    </script> -->
+
+
+    <a href="http://www.w3school.com.cn/jsref/jsref_events.asp">JS事件</a>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- 
+        当JavaScript引擎执行JavaScript代码时，发生了错误，导致程序停止运行。
+        当异常产生，并且将这个异常生成一个错误信息
+
+        捕获
+
+        try{
+            发生异常的代码块;
+        }catch(err){
+            错误信息处理;
+        }
+     -->
+    <script>
+        function demo() {
+            try {
+                alert(str);
+            } catch (err) {
+                alert(err);
+            }
+        }
+        demo();
+    </script>
+
+    <!-- 当代码量多的时候  出现错误可能多处，  通过throw语句创建一个自定义错误-->
+    <form action="">
+        <input type="text" id="txt">
+        <input type="button" id="btn" onclick="demo1()" value="anniu">
+    </form>
+
+    <script>
+        function demo1() {
+            try {
+                var e = document.getElementById("txt").value;
+                if (e == "") {
+                    throw "第一个用户输入异常"; //可以标记哪里出现的问题
+                }
+            } catch (err) {
+                alert(err);
+            }
+        }
+    </script>
+</body>
+
+</html>
