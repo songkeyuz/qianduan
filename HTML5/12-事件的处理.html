@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DOM0级处理程序 -->
+    <div id="div">
+        <button id="btn1">按钮</button>
+    </div>
+    <!-- <script>
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function() {
+            alert("Hello,这是DOM0级处理程序1")
+        }; //被覆盖掉
+        btn1.onclick = function() {
+            alert("Hello,这是DOM0级处理程序2")
+        };
+        // btn1.onclick=null;//只需要修改一次
+    </script> -->
+
+
+    <!-- DOM2级事件处理程序 -->
+    <script>
+        var btn1 = document.getElementById("btn1");
+        btn1 = addEventListener("click", demo1);
+        btn1 = addEventListener("click", demo2);
+
+        function demo1() {
+            alert("DOM2级事件处理程序1")
+        }
+
+        function demo2() {
+            alert("DOM2级事件处理程序2")
+        }
+        //不会覆盖
+
+        //移除
+        btn1.removeEventListener("click", demo2);
+    </script>
+</body>
+
+</html>

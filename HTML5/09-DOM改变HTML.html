@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        1、改变HTML输出流
+            绝对不要在文档加载完成之后使用document.write()。这会覆盖该文档
+        
+        2、寻找元素
+            通过id找到HTML元素
+            通过标签名找到HTML元素
+
+        3、改变HTML内容
+            使用属性：innerHTML
+
+        4、改变HTML属性
+            使用属性：attribute
+
+    -->
+    <!-- <p id="pid">hello</p>
+    <button onclick="demo()">按钮</button>
+    <script>
+        function demo() {
+            //获取id 并更改内容
+            // document.getElementById("pid").innerHTML = "你好";
+
+            //先获取id   再更改内容
+            // var nv = document.getElementById("pid");
+            // nv.innerHTML = "wohao";
+        }
+    </script> -->
+
+    <!-- 通过标签名找HTML元素 -->
+    <script type="text/javascript">
+        function getElements() {
+            var x = document.getElementsByTagName("input");
+            alert(x.length);
+        }
+    </script>
+    <input name="myInput" type="text" size="20" /><br />
+    <input name="myInput" type="text" size="20" /><br />
+    <input name="myInput" type="text" size="20" /><br />
+    <br />
+    <input type="button" onclick="getElements()" value="How many input elements?" />
+
+    <a href="http://www.w3school.com.cn/jsref/met_doc_getelementsbytagname.asp" target="_bank">getElementsByTagName</a>
+
+</body>
+
+</html>

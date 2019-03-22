@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        DOM EventListener:
+            方法：
+            addEventListener()  向指定元素添加事件句柄   添加多个不会覆盖
+            removeEventListener()   移除指定元素的事件句柄
+                
+     -->
+    <p>用户点击后使用 addEventListener() 方法来执行函数。</p>
+    <button id="myBtn">点我</button>
+    <p id="demo">
+        <script>
+            document.getElementById("myBtn").addEventListener("click", myFunction);
+
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Hello World";
+            }
+        </script>
+        <a href="http://www.runoob.com/jsref/met-element-addeventlistener.html">addEventListener具体讲解</a>
+        <a href="http://www.runoob.com/jsref/met-element-removeeventlistener.html">removeEventListener具体讲解</a>
+</body>
+
+</html>
